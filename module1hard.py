@@ -6,5 +6,5 @@ list_ball = [sum(a)/len(a),sum(b)/len(b),sum(c)/len(c),sum(d)/len(d),sum(e)/len(
 students = {'Johnny', 'Bilbo', 'Steve', 'Khendrik', 'Aaron'}
 all_students = sorted(list(students)) # Преобразовала множество в список + сортировка по алфавиту
 #print(all_students)
-ball_students = dict(zip(all_students, map(float, list_ball)))
+ball_students = dict(zip(all_students, map(float, list_ball))) # Объединила данные в словарь
 print(ball_students)
