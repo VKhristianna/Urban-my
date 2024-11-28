@@ -22,7 +22,7 @@ class Table:
 # 3. Обладать атрибутом name - имя гостя.
 class Guest(Thread):
     def __init__(self, name):
-        super().__init__()          # Инициализация потока
+        super().__init__()
         self.name = name            # Имя гостя
 # 4. Обладать методом run, где происходит ожидание случайным образом от 3 до 10 секунд.
     def run(self):
