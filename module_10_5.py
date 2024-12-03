@@ -11,11 +11,11 @@ from datetime import timedelta
 # Создайте функцию read_info(name), где name - название файла.
 # Функция должна:
 def read_info(name):
-    all_data = []  # 1. Создавать локальный список all_data.
-    with open(name, 'r') as file:  # 2. Открывать файл name для чтения.
+    all_data = []                          # 1. Создавать локальный список all_data.
+    with open(name, 'r') as file:          # 2. Открывать файл name для чтения.
         while True:
-            line = file.readline()  # 3. Считывать информацию построчно (readline),
-            if not line:  # пока считанная строка не окажется пустой.
+            line = file.readline()         # 3. Считывать информацию построчно (readline),
+            if not line:                   # пока считанная строка не окажется пустой.
                 break
             all_data.append(line.strip())  # 4. Во время считывания добавлять каждую строку в список all_data.
     return all_data
