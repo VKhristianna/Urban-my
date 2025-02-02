@@ -1,17 +1,18 @@
 """Домашнее задание по теме "Методы отправки сообщений"."""
 #  Цель: написать простейшего телеграм-бота, используя асинхронные функции.
+# Используется aiogram 3.17.0
 
 import asyncio
-from aiogram import Bot, Dispatcher, types
+from aiogram import Bot, Dispatcher, types, F
 from aiogram.filters import Command
 
-api = '7676529448:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+api = '7676529448:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
 bot = Bot(token=api)
 
 dp = Dispatcher()
 
 
-@dp.message(lambda message: message.text == 'Привет')
+@dp.message(F.text == 'Привет')
 async def all_messages(message: types.Message):
     await message.answer('Введите команду /start, чтобы начать общение.')
 
@@ -26,4 +27,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
+
 
