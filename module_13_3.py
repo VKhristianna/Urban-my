@@ -12,7 +12,7 @@ dp = Dispatcher()
 
 
 @dp.message(lambda message: message.text == 'Привет')
-async def all_massages(message: types.Message):
+async def all_messages(message: types.Message):
     await message.answer('Введите команду /start, чтобы начать общение.')
 
 
