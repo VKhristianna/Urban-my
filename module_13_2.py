@@ -10,14 +10,14 @@ bot = Bot(token=api)
 
 dp = Dispatcher()
 
-# Хэндлер для команды /start
-@dp.message(Command("start"))
-async def start_handler(message: types.Message):
+# Хэндлер для конкретного текстового сообщения
+@dp.message(lambda message: message.text == 'Привет')
+async def all_messages(message: types.Message):
     print('Введите команду /start, чтобы начать общение.')
 
-# Хэндлер для конкретного текстового сообщения
-@dp.message(lambda message: message.text == 'Что делать?')
-async def all_messages(message: types.Message):
+# Хэндлер для команды /start
+@dp.message(Command("start"))
+async def start(message: types.Message):
     print('Привет! Я бот помогающий твоему здоровью.')
 
 # Запуск процесса
