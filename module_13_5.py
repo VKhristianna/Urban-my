@@ -8,7 +8,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.filters import Command
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 
-api = '7676529448:AAEqQk_kFITApUCC0U2pjNq_rEG3gVBkxo4'
+api = '7676529448:AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
 bot = Bot(token=api)
 
 dp = Dispatcher()
